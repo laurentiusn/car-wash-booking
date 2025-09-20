@@ -12,7 +12,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
 git clone https://github.com/laurentiusn/car-wash-booking.git
 ```
 ```bash
-cd https://github.com/laurentiusn/car-wash-booking.git
+cd .\car-wash-booking\
 ```
 
 ### 2\. Instalasi Dependensi
@@ -56,8 +56,14 @@ DB_PASSWORD=
 php artisan key:generate
 ```
 
-### 5\. Menjalankan Migrasi dan Seeder (Penting\!)
+### 5\. Menjalankan Migrasi 
 
+Jalankan MySQL pada XAMPP (atau Laragon). Eksekusi perintah berikut:
+
+```bash
+php artisan migrate
+```
+Jika terdapat database dengan nama yang sama dengan konfigurasi pada `.env`, maka jalankan perintah berikut untuk drop semua table pada database:
 
 ```bash
 php artisan migrate:fresh
