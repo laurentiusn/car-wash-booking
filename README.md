@@ -1,12 +1,12 @@
-# Car Wash Booking
+# Car Wash Booking Website
 
-Proyek ini sebagai submission challange pembuatan skema database untuk sistem car wash booking
+This project are made as a submission challange of database schema for car wash booking website. Project by `Laurentius Nicholas C.`
 
-## Menjalankan Project
+## Run The Project
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal Anda.
+Follow these step to run the migration locally
 
-### 1\. Clone Repositori
+### 1\. Clone Repository
 
 ```bash
 git clone https://github.com/laurentiusn/car-wash-booking.git
@@ -15,21 +15,21 @@ git clone https://github.com/laurentiusn/car-wash-booking.git
 cd .\car-wash-booking\
 ```
 
-### 2\. Instalasi Dependensi
+### 2\. Install Dependency
 
 ```bash
 composer install
 ```
 
-### 3\. Konfigurasi Lingkungan
+### 3\. Environment Configuration
 
-Salin file `.env.example` menjadi `.env` dan sesuaikan konfigurasinya.
+Copy `.env.example` into `.env`
 
 ```bash
 cp .env.example .env
 ```
 
-Buka file `.env` dan atur database:
+Open `.env` file and set the database configuration
 
 ```
 DB_CONNECTION=mysql
@@ -40,7 +40,7 @@ DB_USERNAME=[user_database_anda]
 DB_PASSWORD=[password_database_anda]
 ```
 
-Konfigurasi database secara default:
+Default configuration database:
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -51,19 +51,19 @@ DB_PASSWORD=
 ```
 
 ### 4\. Generate Application Key
-
+Generate application key to run the project
 ```bash
 php artisan key:generate
 ```
 
-### 5\. Menjalankan Migrasi 
+### 5\. Migration
 
-Jalankan MySQL pada XAMPP (atau Laragon). Eksekusi perintah berikut:
+Run MySQL on XAMPP (or Laragon). Then, run the following command:
 
 ```bash
 php artisan migrate
 ```
-Jika terdapat database dengan nama yang sama dengan konfigurasi pada `.env`, maka jalankan perintah berikut untuk drop semua table pada database:
+If there is a database name that is the same as database name on `.env` configuration, then execute this command to drop all table on the database:
 
 ```bash
 php artisan migrate:fresh
@@ -72,7 +72,7 @@ php artisan migrate:fresh
 ## ERD
 ![ERD Sistem Booking Car Wash](./public/ERD.jpg)
 
-| Singkatan | Deskripsi    |
+| Note ||
 | :-------: | :----------- |
 | `PK`      | Primary Key  |
 | `FK`      | Foreign Key  |
